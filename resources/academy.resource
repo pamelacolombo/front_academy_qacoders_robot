@@ -10,7 +10,7 @@ ${entrarButton}                login
 ${cadastrosSpan}               Cadastros
 ${diretoriasSpan}              Diretorias
 ${novoCadastroButton}          Novo Cadastro
-${nomeDiretoriaInput}          boardName  
+${nomeDiretoriaInput}          boardName
 ${salvarButton}                save
 ${usuariosSpan}                Usuários
 ${nomeCompletoInput}           fullName
@@ -169,26 +169,30 @@ Passo 3 - Digitar uma senha cadastrada
   Input Password                   locator=${passwordSysadminInput}  password=1234@Test
   Sleep  2s
 
-
-#Passo 8 - Alterar os dados da Diretoria
-  #Criar massa de dados de Diretoria
-  #Wait Until Element Is Visible    locator=${nomeDiretoriaInput}   
-  #Input Text                       locator=${nomeDiretoriaInput}    text=${BOARD_NAME_ALTERAR} 
-  #Sleep  2s
+Passo 7 - Clicar em editar
+  Wait Until Element Is Visible    locator=${editarButton} 
+  Click Element                    locator=${editarButton} 
+  Sleep  2s
 
 Passo 8 - Alterar os dados da Diretoria
   Criar massa de dados de Diretoria
-  Wait Until Element Is Visible    locator=${avancarPagina}
-  Click Element                    locator=${avancarPagina}
-  Sleep  2s
-  Wait Until Page Contains         locator=${usuarioPamela} 
-  Sleep  2s 
-  Wait Until Element Is Visible    locator=${editarButton}
-  Click Element                    locator=${editarButton}
-  Sleep  2s
   Wait Until Element Is Visible    locator=${nomeDiretoriaInput}   
   Input Text                       locator=${nomeDiretoriaInput}    text=${BOARD_NAME_ALTERAR} 
   Sleep  2s
+
+#Passo 8 - Alterar os dados da Diretoria
+ # Criar massa de dados de Diretoria
+ # Wait Until Element Is Visible    locator=${avancarPagina}
+ # Click Element                    locator=${avancarPagina}
+ # Sleep  2s
+ # Wait Until Page Contains         locator=${usuarioPamela} 
+ # Sleep  2s 
+ # Wait Until Element Is Visible    locator=${editarButton}
+ # Click Element                    locator=${editarButton}
+ # Sleep  2s
+ # Wait Until Element Is Visible    locator=${nomeDiretoriaInput}   
+ # Input Text                       locator=${nomeDiretoriaInput}    text=${BOARD_NAME_ALTERAR} 
+ # Sleep  2s
 
 Passo 9 - Clicar em Salvar Alterações
   Wait Until Element Is Visible    locator=${salvarButton}

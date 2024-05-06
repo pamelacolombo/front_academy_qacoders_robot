@@ -42,6 +42,7 @@ Cenário de Teste: Editar Cadastro de Diretoria
   Passo 4 - Clicar em entrar
   Passo 5 - Clicar em Cadastros
   Passo 6 - Clicar em Diretorias
+  Passo 7 - Clicar em editar
   Passo 8 - Alterar os dados da Diretoria
   Passo 9 - Clicar em Salvar Alterações
  
